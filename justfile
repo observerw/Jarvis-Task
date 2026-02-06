@@ -74,6 +74,7 @@ help:
     @echo ""
     @echo "SETUP:"
     @echo "  just init                                Initialize data files"
+    @echo "  just sync-reminders                      Sync tasks to macOS Reminders"
 
 # === QUERY - Basic ===
 
@@ -325,6 +326,10 @@ set-note id note:
     just set-task-field "{{id}}" note "{{note}}"
 
 # === SETUP ===
+
+# Sync tasks to macOS Reminders
+sync-reminders:
+    export PYTHONPATH=. && uv run python src/sync_reminders.py
 
 # Initialize data files (if not exist)
 init:
