@@ -6,12 +6,19 @@ It strips away complex UIs, clicking, and dragging. Instead, it offers a pure **
 
 > **"It's like having a project manager who lives in your CLI."**
 
-## ✨ Philosophy
+## 🚀 Getting Started
 
-- **Zero Friction**: Don't waste time managing the tool. Just chat.
-- **Local & Private**: Your data is stored in simple, readable JSON files on your machine. No clouds, no subscriptions.
-- **Agent-Native**: Built on the **OpenCode** standard, Jarvis isn't just a script—it's an intelligent agent that understands context, relationships, and time.
-- **Transparent**: The agent executes standard CLI commands (`just`, `jq`) under the hood. You can always see exactly what it's doing.
+### 1. Installation
+
+Directly paste the following instruction into **OpenCode**:
+
+```text
+Clone https://github.com/observerw/OpenCode-Jarvis to ~/.opencode-jarvis, then add `alias jarvis='cd ~/.opencode-jarvis && opencode'` to my shell configuration file (e.g., .bashrc or .zshrc).
+```
+
+### 2. Start Chatting
+
+After the setup is complete, simply type `jarvis` in your terminal to start managing your tasks. Jarvis will automatically handle initialization for you.
 
 ## 💬 How to Use
 
@@ -40,20 +47,6 @@ Reflect on your progress.
 - **Input**: `/review What did I finish this week?`
 - **Agent Output**: Generates a summary of completed work and completion rates.
 
-## 🚀 Getting Started
-
-### 1. Installation
-
-Directly paste the following instruction into **OpenCode**:
-
-```text
-Clone https://github.com/observerw/OpenCode-Jarvis to ~/.opencode-jarvis, then add `alias jarvis='cd ~/.opencode-jarvis && opencode'` to my shell configuration file (e.g., .bashrc or .zshrc).
-```
-
-### 2. Start Chatting
-
-After the setup is complete, simply type `jarvis` in your terminal to start managing your tasks. Jarvis will automatically handle initialization for you.
-
 ## ⚙️ Under the Hood
 
 OpenCode-Jarvis is built on a robust, hackable stack:
@@ -63,6 +56,13 @@ OpenCode-Jarvis is built on a robust, hackable stack:
 - **Intelligence**: `.opencode/` (Defines the Agent's personality, commands, and skills).
 
 Because it adheres to the **OpenCode** standard, you can easily customize the agent's behavior or add new skills just by editing Markdown files in `.opencode/`.
+
+## ✨ Philosophy
+
+- **Zero Friction**: Don't waste time managing the tool. Just chat.
+- **Local & Private**: Your data is stored in simple, readable JSON files on your machine. No clouds, no subscriptions.
+- **Agent-Native**: Built on the **OpenCode** standard, Jarvis isn't just a script—it's an intelligent agent that understands context, relationships, and time.
+- **Transparent**: The agent executes standard CLI commands (`just`, `jq`) under the hood. You can always see exactly what it's doing.
 
 ## 📄 License
 
