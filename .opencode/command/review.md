@@ -11,6 +11,10 @@ agent: jarvis
 
 !`just stats-status`
 
+## Available Operations
+
+!`just help`
+
 ## User Input
 
 $ARGUMENTS
@@ -28,6 +32,7 @@ Based on the provided data and user input, complete the review analysis:
 4. Provide 1-2 actionable suggestions for productivity improvement.
 
 Examples of user input:
+
 - "What did I do this week?"
 - "What is the completion rate for this month?"
 - "How is the Double 11 project progressing?"
@@ -36,5 +41,6 @@ Examples of user input:
 ---
 
 **Tool Tips**:
+
 - Run `just --list` or `just help` to see all available operations.
 - For unconventional queries, you can write manual `jq` (refer to `just schema`), but prioritize `just` commands.

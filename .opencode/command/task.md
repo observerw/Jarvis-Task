@@ -9,6 +9,16 @@ $ARGUMENTS
 
 ---
 
+## Data Schema
+
+!`just schema`
+
+## Available Operations
+
+!`just help`
+
+## Requirements
+
 Understand the user's intent from their input and perform the corresponding operations:
 
 1. **Create Task**: Extract title, time, and related people/places. Use `just` commands to create tasks and entities and link them.
@@ -19,6 +29,7 @@ Understand the user's intent from their input and perform the corresponding oper
 Briefly confirm results after the operation is complete.
 
 Examples of user input:
+
 - "Meeting with Manager Li at 3 PM tomorrow via Tencent Meeting"
 - "Remind me to buy toothpaste"
 - "How much of Project A is left?"
@@ -27,5 +38,6 @@ Examples of user input:
 ---
 
 **Tool Tips**:
+
 - Run `just --list` or `just help` to see all available operations.
 - For unconventional queries, you can write manual `jq` (refer to the schema in the system prompt), but prioritize `just` commands.

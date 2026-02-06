@@ -33,5 +33,6 @@ Examples of user input: "Help me plan my day", "Am I free this afternoon?", "Pus
 ---
 
 **Tool Tips**:
+
 - Run `just --list` or `just help` to see all available operations.
 - For unconventional queries, you can write manual `jq` (refer to `just schema`), but prioritize `just` commands.
