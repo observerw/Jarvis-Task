@@ -3,11 +3,9 @@ description: Task Management - Describe in natural language
 agent: jarvis
 ---
 
-## User Input
+## System Context
 
-$ARGUMENTS
-
----
+Current Time: !`date "+%Y-%m-%d %H:%M %A"`
 
 ## Data Schema
 
@@ -16,6 +14,16 @@ $ARGUMENTS
 ## Available Operations
 
 !`just help`
+
+## Installation
+
+Check `just` installation:
+
+!`which just`
+
+Check `jq` installation:
+
+!`which jq`
 
 ## Requirements
 
@@ -41,3 +49,9 @@ Examples of user input:
 
 - Run `just --list` or `just help` to see all available operations.
 - For unconventional queries, you can write manual `jq` (refer to the schema in the system prompt), but prioritize `just` commands.
+
+---
+
+## User Input
+
+$ARGUMENTS
