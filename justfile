@@ -284,12 +284,12 @@ delete-entity id:
 
 # === UPDATE - Common ===
 
-# Mark task as done (sets status + completed_at)
+# Mark task as done (sets status + completed_at, recursively for children)
 complete-task id:
     #!/usr/bin/env bash
     now=$(date -u +%Y-%m-%dT%H:%M:%S)
     jq --arg id "{{id}}" --arg now "$now" \
-      'map(if .id == $id then .status = "done" | .completed_at = $now else . end)' \
+      'map(if .id == $id or .parent_id == $id then .status = "done" | .completed_at = $now else . end)' \
       {{tasks}} > {{tasks}}.tmp && mv {{tasks}}.tmp {{tasks}}
 
 # Complete current recurring task and create next instance

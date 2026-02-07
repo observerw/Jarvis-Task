@@ -7,13 +7,9 @@ agent: jarvis
 
 Current Time: !`date "+%Y-%m-%d %H:%M %A"`
 
-Check `just` installation:
+Check `just` installation: !`which just`
 
-!`which just`
-
-Check `jq` installation:
-
-!`which jq`
+Check `jq` installation: !`which jq`
 
 ## Today's Tasks
 
@@ -27,20 +23,16 @@ Check `jq` installation:
 
 !`just milestones`
 
-## User Input
-
-$ARGUMENTS
-
----
-
 Based on the provided data and user input, complete the following:
 
-1. Present today's tasks in a table (time, title, notes). Highlight overdue tasks in red. Show long-term tasks separately to remind the user.
-2. If the user has a specific question (e.g., "Am I free this afternoon?"), answer directly.
-3. If the user requests an operation (e.g., "Postpone"), execute the corresponding `just` command.
-4. If there is no specific question, provide suggestions for today's schedule.
-
-Examples of user input: "Help me plan my day", "Am I free this afternoon?", "Push all overdue tasks to tomorrow".
+1. Present today's tasks in a table (time, title, notes).
+2. Review the "Overdue Tasks" section and start a natural conversation with the user to help them resolve these items. Ask open-ended questions like "I see a few things from yesterday still pending like [Task]. Should we mark those as done or push them to later?"
+3. Based on the user's natural language response, identify and execute the appropriate `just` commands:
+   - If they say they finished it: use `just complete-task <id>` (which will also handle subtasks).
+   - If they want to postpone: use `just postpone-task <id> <date>`.
+   - If they want to remove it: use `just delete-task <id>`.
+4. If the user has a specific question (e.g., "Am I free this afternoon?"), answer directly.
+5. If there is no specific question, provide suggestions for today's schedule.
 
 ---
 
@@ -48,3 +40,9 @@ Examples of user input: "Help me plan my day", "Am I free this afternoon?", "Pus
 
 - Run `just --list` or `just help` to see all available operations.
 - For unconventional queries, you can write manual `jq` (refer to `just schema`), but prioritize `just` commands.
+
+---
+
+## User Input
+
+$ARGUMENTS
